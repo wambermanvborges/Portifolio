@@ -1,33 +1,23 @@
 * {
-    transition: 1s;
+    transition: 500ms;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
 :root {
-    --bg-color: #101010;
-    --font-color: white;
-    --section-bg-color: #202020;
-}
+    color-scheme: dark light;
+    --bg-color-dark: #101010;
+    --section-bg-color-dark: #202020;
+    --font-color-dark: #efe4fa;
 
-.light-theme {
-    --bg-color: #cecece;
-    --font-color: black;
-    --section-bg-color: white;
-}
-
-#themeToggle {
-    padding: 10px 15px;
-    background-color: transparent;
-    border: 1px solid white;
-    color: white;
-    border-radius: 10px;
-    font-size: 20px;
+    --bg-color-light: #efe4fa;
+    --section-bg-color-light: white;
+    --font-color-light: black;
 }
 
 body {
-    background-color: var(--bg-color);
+    background-color: light-dark(var(--bg-color-light), var(--bg-color-dark));
 }
 
 header {
@@ -43,8 +33,8 @@ header {
 }
 
 .header-text {
-    background-color: var(--section-bg-color);
-    color: var(--font-color);
+    background-color: light-dark(var(--section-bg-color-light), var(--section-bg-color-dark));
+    color: light-dark(var(--font-color-light), var(--font-color-dark));
     font-family: system-ui;
     filter: drop-shadow(0 0 10px #6400ff);
     border-radius: 10px;
@@ -57,7 +47,6 @@ header {
 
 span {
     cursor: pointer;
-    transition: 500ms;
 }
 
 span:hover {
@@ -83,12 +72,11 @@ main {
 section {
     border-radius: 10px;
     margin: 50px;
-    background-color: var(--section-bg-color);
+    background-color: light-dark(var(--section-bg-color-light), var(--section-bg-color-dark));
     width: 100%;
     height: 80vh;
     padding: 10px; /* Opcional, para adicionar espaço interno */
     color: var(--font-color); /* Certifique-se de que o texto seja visível */
-    transition: 1s;
 }
 
 section:hover {
