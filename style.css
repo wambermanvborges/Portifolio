@@ -55,7 +55,7 @@ span:hover {
 
 .photo {
     filter: drop-shadow(0 0 0.75rem #6400ff);
-    border: 5px solid #6400ff;
+    border: 5px solid #202020;
     background-color: #ffff;
     width: 150px;
     height: 150px;
